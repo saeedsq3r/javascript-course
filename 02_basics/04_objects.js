@@ -20,7 +20,7 @@ const regular_user = {
 }
 
 
-console.log(regular_user.full_name.user_full_name.first_name);
+// console.log(regular_user.full_name.user_full_name.first_name);
 
 const obj1 = {1: "a", 2: "b"}
 const obj2 = {3: "a", 4: "b"}
@@ -59,13 +59,54 @@ const users = [
 users[1].email
 // console.log(users[1].email)
 
-console.log(tinder_user);
-console.log(Object.keys(tinder_user));
-console.log(Object.values(tinder_user));
-console.log(Object.entries(tinder_user));
+// console.log(tinder_user);
+// console.log(Object.keys(tinder_user));
+// console.log(Object.values(tinder_user));
+// console.log(Object.entries(tinder_user));
 
 
-console.log(tinder_user.hasOwnProperty('is_logedin'));
+// console.log(tinder_user.hasOwnProperty('is_logedin'));
 
 
 
+const course = {
+    course_name: "js in hindi",
+    price: "999",
+    course_instructor: "hitesh"
+}
+
+// course.course_instructor
+
+const {course_instructor: instructor} = course
+
+console.log(instructor);
+
+
+// in react we use the destructuring like this
+/* 
+ const navbar = ({company}) => {
+
+ }
+
+ navbar(company = "saeed")
+*/
+
+/*
+json file formate object
+
+{
+    "name": "saeed",
+    "course": "js in hindi",
+    "price": "free"
+}
+*/
+
+/*
+json file formate using array
+
+[
+    {},
+    {},
+    {}
+]
+*/
