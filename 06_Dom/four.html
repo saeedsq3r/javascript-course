@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | learning</title>
+</head>
+<body style="background-color: #212122; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+
+
+<script>
+    function add_language(lang_name){
+        const li =   document.createElement('li')
+        li.innerHTML = `${lang_name}`
+        document.querySelector('.language').appendChild(li)
+    }
+    add_language("python")
+    add_language("C plus plus")
+
+
+    function add_opti_language(lang_name){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(lang_name))
+        document.querySelector('.language').appendChild(li)
+    }
+    add_opti_language('golang')
+    add_opti_language('c#')
+
+    // Edit
+    const second_lang = document.querySelector("li:nth-child(2)")
+    // console.log(second_lang);
+    // second_lang.innerHTML = "Mojo"
+    const new_li = document.createElement('li')
+    new_li.textContent = "Mojo"
+    second_lang.replaceWith(new_li)
+
+    // edit
+
+    const first_lang = document.querySelector("li:nth-child(1)")
+    first_lang.outerHTML = '<li>TypeScript</li>'
+
+    // remove
+
+    const last_lang = document.querySelector('li:last-child')
+    last_lang.remove()
+
+</script>
+
+</html>
